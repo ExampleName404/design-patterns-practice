@@ -5,10 +5,17 @@ public class Car : Vehicle
     // Тип трансмиссии
     public string TransmissionType { get; set; }
 
-    public Car(string brand, int year, DateTime lastDate, string model, int amountOfDoor, string transmissionType)
-    : base(brand, year, lastDate, model)
+    // Конструктор для записи
+    public Car(string brand, DateTime lastDate, string model, int amountOfDoor, string transmissionType)
+    : base(brand, lastDate, model)
     {
         this.AmountOfDoor = amountOfDoor;
         this.TransmissionType = transmissionType;
+    }
+
+    public override void ShowInfo()
+    {
+        base.ShowInfo();
+        Console.WriteLine($"Количество дверей: {AmountOfDoor}, тип коробки {TransmissionType}");
     }
 }
