@@ -16,6 +16,7 @@ public class Motorcycle : Vehicle
         this.SideCar = sideCar;
     }
 
+    // Перезаписанная функция для вывода атрибутов
     public override void ShowInfo()
     {
         base.ShowInfo();
